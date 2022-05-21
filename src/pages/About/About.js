@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import Navbar2 from "../../components/Navbar2/Navbar2"
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
 import { dataStuff } from './dataStuff'
@@ -22,60 +21,10 @@ const About = ({isSideBarOpen, setIsSideBarOpen}) => {
 
 
     return (
-        <div className = "  border border-transparent"        >
-            {/* <div className="about-container xl:container mx-auto mt-24 px-2 sm:px-12"> */}
-                <div className="about-container xl:container pt-4">
+        // <div className = "  border border-red-500">
+                <div className="about-container container mx-auto pt-4 w-full overflow-hidden">
 
-                {/* <div className = " bg-green-main/80 backdrop-blur-sm flex flex-col sm:hidden  items-center pl-4  pr-4 py-2 fixed top-0 left-0 z-10 w-full ">
-                    <div className = "flex justify-between w-full sm:w-auto">
-                        <img className='w-[180px]' src="./images/logo1.png" alt="" />
-                        <div className= {isSideBarOpen ? "flex sm:hidden fixed-sidebar active" : "flex sm:hidden fixed-sidebar "} onClick = {() => setIsSideBarOpen(!isSideBarOpen)}></div>
-                    </div>
-                    <ul className = {isSideBarOpen ?
-                        " sm:flex sm:gap-10 transition-all h-56 w-full sidebar-list flex flex-col justify-center overflow-hidden" 
-                        : "w-full sm:w-auto flex sm:flex-row sm:gap-7 md:gap-10 sm:h-auto h-0 overflow-hidden transition-all flex-col justify-center"}>
-                        <motion.li 
-                            whileHover = {{
-                                scale: 1.3,
-                            }}
-                            transition = {{
-                                type: "spring",
-                                stiffness: 300
-                            }}
-                        className = "text-center text-xl mb-4 sm:text-base sm:mb-0"><Link to = "/" className = "text-white tracking-wider hover:text-gray-200  transition-all" >Bosh sahifa</Link></motion.li>
-                        <motion.li 
-                            whileHover = {{
-                                scale: 1.3,
-                            }}
-                            transition = {{
-                                type: "spring",
-                                stiffness: 300
-                            }}
-                        className = "text-center text-xl mb-4 sm:text-base sm:mb-0"><Link to = "/about" className = "text-white tracking-wider hover:text-gray-200  transition-all" >Biz haqimizda</Link></motion.li>
-                        <motion.li 
-                            whileHover = {{
-                                scale: 1.3,
-                            }}
-                            transition = {{
-                                type: "spring",
-                                stiffness: 300
-                            }}
-                        className = "text-center text-xl mb-4 sm:text-base sm:mb-0"><Link to = "/kurslar" className = "text-white tracking-wider hover:text-gray-200  transition-all" >Kurslar</Link></motion.li>
-                        <motion.li 
-                            whileHover = {{
-                                scale: 1.3,
-                            }}
-                            transition = {{
-                                type: "spring",
-                                stiffness: 300
-                            }}
-                        className = "text-center text-xl mb-4 sm:text-base sm:mb-0"><Link to = "/login" className = "text-white tracking-wider hover:text-gray-200  transition-all" >Kirish</Link></motion.li>
-                    </ul>
-                </div> */}
-                
-                {/* <Navbar2 isSideBarOpen = {isSideBarOpen} setIsSideBarOpen = {setIsSideBarOpen} /> */}
                     <Navbar isSideBarOpen={isSideBarOpen} setIsSideBarOpen = {setIsSideBarOpen} bgGreen = {true} />
-
 
                 {dataStuff.map((item, index) => {
                     const {img, fname, lname, lavozimi, malumot, email, tel} = item           
@@ -122,7 +71,7 @@ const About = ({isSideBarOpen, setIsSideBarOpen}) => {
 
             </div>
 
-        </div>
+        // </div>
     )
 }
 

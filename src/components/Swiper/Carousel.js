@@ -11,8 +11,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Carousel = () => {
   return (
-    <div className="carousel-container absolute top-0 left-0 w-full -z-10 min-h-screen">
-      <div className="absolute top-0 left-0 bg-gradient-to-r from-black/80 z-10 to-black/[.15] w-screen h-screen"></div>
+    <div className="carousel-container absolute top-0 left-0 w-full -z-10 h-full ">
+      <div className="absolute top-0 left-0 bg-gradient-to-r from-black/80 z-10 to-black/[.15] w-screen h-full"></div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

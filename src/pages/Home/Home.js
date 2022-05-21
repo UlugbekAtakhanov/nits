@@ -5,7 +5,6 @@ import { FaFacebookF, FaInstagram, FaTelegramPlane, FaTwitter } from "react-icon
 import Navbar from '../../components/Navbar/Navbar'
 import { Link } from 'react-router-dom'
 import Carousel2 from '../../components/Carousel2/Carousel2'
-import Navbar2 from '../../components/Navbar2/Navbar2'
 import Footer from '../../components/Footer/Footer'
 import Map from "../../components/Map/Box9"
 import Carousel from '../../components/Swiper/Carousel'
@@ -82,21 +81,21 @@ const Home = ({ isSideBarOpen, setIsSideBarOpen }) => {
 
 
     return (
-        <motion.div className=" pt-4"
+        <motion.div className=" pt-"
             variants={pageTransition}
             exit="exit"
             initial="hidden"
             animate="visible"
         >
 
-            <div className="xl:container mx-auto">
+
+            <div className=' relative pt-4 lg:px-8'>
 
                 <Carousel />
 
                 <Navbar isSideBarOpen={isSideBarOpen} setIsSideBarOpen={setIsSideBarOpen} />
 
-                <div className=" min-h-screen flex md:w-[80%] lg:w-[50%] md:items-center ">
-                    {/* <motion.div className="  grid place-content-center flex-1 relative z-[-1] lg:w-3/5 pl-6 md:w-3/4" */}
+                <div className=" min-h-screen flex md:w-[80%] lg:w-[50%] md:items-center">
                     <motion.div className="  grid place-content-center flex-1  lg:w-3/5 pl-6 md:w-3/4"
                         initial={{
                             x: "-100vw"
@@ -110,15 +109,19 @@ const Home = ({ isSideBarOpen, setIsSideBarOpen }) => {
                             stiffness: 120,
                         }}
                     >
-                        <h2 className="text-white text-5xl font-extrabold mb-4  ">Billim uchun qilingan sarmoya bu eng yahshi sarmoya.</h2>
-                        <h3 className="text-white mb-4">Hozirdanoq uzing uchun sarmoya qilishni boshla!</h3>
+                        <h2 className="text-white sm:text-5xl font-extrabold mb-4  ">Billim uchun qilingan sarmoya bu eng yahshi sarmoya.</h2>
+                        <h3 className="text-white sm:text-lg text-sm mb-4">Hozirdanoq uzing uchun sarmoya qilishni boshla!</h3>
                         <p className="mb-8 text-green-secondary ">Namangan IT School</p>
-                        {/* <div className="flex gap-4">
-                            <Link to="" className="text-sm backdrop-blur-sm bg-white/30 rounded-lg border border-slate-300/50 leading-[50px] px-[45px]  text-white hover:bg-white/50 hover:text-white">Biz bilan bog'lanish  </Link>
-                            <Link to="/register" className="text-sm backdrop-blur-sm bg-white/30 rounded-lg border border-slate-300/50 leading-[50px] px-[45px] text-white hover:bg-white/50 hover:text-white">Kursga Yozilish</Link>
-                        </div> */}
+                        <div className="flex flex-col sm:flex-row gap-4 w-max">
+                            <Link to="" className=" text-sm backdrop-blur-sm bg-white/30 rounded-lg border border-slate-300/50 leading-[50px] px-[45px]  text-white hover:bg-white/50 hover:text-white">Biz bilan bog'lanish  </Link>
+                            <Link to="/register" className=" text-sm backdrop-blur-sm bg-white/30 rounded-lg border border-slate-300/50 leading-[50px] px-[45px] text-white hover:bg-white/50 hover:text-white">Kursga Yozilish</Link>
+                        </div>
                     </motion.div>
                 </div>
+
+            </div>
+
+            <div className="xl:container mx-auto">
 
 
 

@@ -66,7 +66,8 @@ const Navbar = ({ isSideBarOpen, setIsSideBarOpen, bgGreen }) => {
 
         <>
 
-            <div className={`${bgGreen ? "bg-green-secondary/90 sticky top-0 z-10" : "bg-white/50"} backdrop-blur-sm p-4 rounded-lg border-slate-400 border mx-4`}>
+                {/* <div className={`${bgGreen ? "bg-green-secondary/90 sticky top-0 z-10" : "bg-white/50"} backdrop-blur-sm p-4 rounded-lg border-slate-400 border mx-4`}> */}
+            <div className={`${bgGreen ? "bg-green-secondary/90 " : "bg-white/50"} backdrop-blur-sm p-4 rounded-lg border-slate-400 border mx-4`}>
 
                 <div className="flex justify-between items-center w-full sm:w-auto">
 
@@ -82,7 +83,7 @@ const Navbar = ({ isSideBarOpen, setIsSideBarOpen, bgGreen }) => {
                                 type: "spring",
                                 stiffness: 500
                             }}
-                        ><img className='w-[180px]' src="./images/logo1.png" alt="" /></motion.p>
+                        ><img className='w-[100px] sm:w-[180px]' src="./images/logo1.png" alt="" /></motion.p>
                     </Link>
 
                     {/* hamburger */}
@@ -159,8 +160,8 @@ const Navbar = ({ isSideBarOpen, setIsSideBarOpen, bgGreen }) => {
                                 animate={{ height: list ? "auto" : 0, marginTop: "8px" }}
                             >
                                 {route.subRoutes.length > 0 && route.subRoutes.map((item, index) => (
-                                    <div key = {index} onClick={() => setIsSideBarOpen(false)} className='ml-8 py-1 text-white hover:text-green-300'>
-                                        <Link className='block'  to={item.subUrl}>{item.subTitle}</Link>
+                                    <div key={index} onClick={() => setIsSideBarOpen(false)} className='ml-8 py-1 text-white hover:text-green-300'>
+                                        <Link className='block' to={item.subUrl}>{item.subTitle}</Link>
                                     </div>
                                 ))}
                             </motion.div>
