@@ -1,0 +1,34 @@
+
+.fixed-sidebar {
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    // background: rgb(165, 233, 159);
+    background: #fff;
+    transform: translateY(-5px);
+    transition: .3s;
+    }
+    &::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    // background: rgb(165, 233, 159);
+    transform: translateY(5px);
+    transition: .3s;
+    }
+}
+.active::before {
+    transform: translateY(0) rotate(45deg);
+}
+.active::after {
+    transform: translateY(0) rotate(-45deg);
+}

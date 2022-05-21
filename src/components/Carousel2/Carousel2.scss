@@ -1,0 +1,73 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.carousel2 {
+    height: 100%;
+    
+    .alice-carousel {
+        height: 100%;
+        div {
+            height: 100% !important;
+            
+            .alice-carousel__wrapper {
+                
+                ul {
+                    // padding: 2rem;
+                    li {
+                        padding: .5rem;
+                        overflow: visible !important;
+                        padding-top: 3rem;
+                        img {
+                            position: relative;
+                            width: 100% !important;
+                            height: 100% !important;
+                            object-fit: cover;
+                            border-radius: 10px;
+                            ::after {
+                                content: "";
+                                position: absolute;
+                                inset: 0;
+                                background: linear-gradient(to right, black, rgba(0, 0, 0, 0.418));
+                            }
+                        }
+                        .dropdown {
+                            position: absolute;
+                            bottom: 0;
+                            top: 77%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: #fff;
+                            width: 90% !important;
+                            height: 4rem !important;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .alice-carousel__dots-item {
+            border-radius: 0;
+            width: 2rem;
+            height: 3px;
+        }
+    }
+
+    .carousel2-item-container {
+        img {
+            transition: .3s ease-in-out;
+        }
+        &:hover img {
+            filter: blur(2px);
+        }
+        .dropdown {
+            filter: blur(5px);
+            opacity: 0.8;
+            transition: .1s ease-in-out;
+        }
+        &:hover .dropdown {
+            filter: blur(0);
+        }
+    }
+}

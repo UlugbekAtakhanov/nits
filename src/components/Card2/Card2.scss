@@ -1,0 +1,25 @@
+
+
+
+.motion-animation-kurslar {
+    display: flex;
+
+    .course-card-maxi {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        .card-item-maxi-article {
+            background: #fff;
+            max-width: 550px;
+
+        }
+    }
+    .course-card-mini {
+        max-width: 474px;
+        .card-item-mini-article {
+        }
+    }
+}

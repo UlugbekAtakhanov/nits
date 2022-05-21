@@ -1,0 +1,21 @@
+
+
+.about-container {
+    
+
+    .stuff-container {
+        .stuff {
+            img {
+                transition: .3s;
+                object-fit: cover;
+            }
+        }
+        .icons {
+            transition: .3s;
+            &:hover {
+                transform: rotate(360deg) scale(1.3);
+                color: #0082f1;
+            }
+        }
+    }
+}

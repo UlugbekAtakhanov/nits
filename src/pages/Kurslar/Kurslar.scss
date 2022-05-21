@@ -1,0 +1,29 @@
+
+
+.kurs-container {
+    background: url(../../images/bg/freeimg_71978372freejpg850.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+
+    .card-item {
+        background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.671));
+        box-shadow: 0 0 10px white;
+    }
+    .footer-container {
+        box-shadow: inset 0 0 10px #fff
+    }
+
+
+    .card-item1 {
+        border: 3px solid red;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background: #fff;
+    }
+        
+}
